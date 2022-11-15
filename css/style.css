@@ -311,22 +311,28 @@ ul {
     position: absolute;
     left: 12px;
     bottom: 11px;
+    /*transform: translateY(-15%);*/
     display:inline-block;
     color: currentColor;
     align-items: center;
 }
 .form-input:focus ~ .icon-input {
     fill: var(--accent-color);
+    border-color: #188CE8;
+}
+.form-input:focus {
+    border-color: var(--accent-color);
 }
 
 .form-field input,
 .form-field textarea {
     margin: 0;
     padding: 12px 12px;
-
+    outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;  
 }
+
 .form-field input {
     padding-left: 42px;
 }
@@ -352,6 +358,51 @@ ul {
 
 .confirmation {
     margin-bottom: 30px;
+    
+}
+.confirmation .text-feild {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    appearance: none;
+}
+.icon-check {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    border: 2px solid var(--logo-text-color);
+    border-radius: 4px;
+}
+.checkbox:checked + .icon-check {
+    background-color: var(--accent-color);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-color);
+}
+.dogovor {
+    color:var(--hero-button-hover)
+}
+.button-submit {
+    padding: 10px 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 
 }
 /*КНОПКИ ВСІ*/
@@ -360,28 +411,17 @@ ul {
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 216px;
-
-    /*height: 50px;
-    left: 692px;
-    top: 430px;*/
     text-align: center;
-
-    /*border: 1px solid transparent;*/
-    
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.06em;
-    
     background-color: var(--accent-color);
     color:var(--hero-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    
     cursor: pointer;
     border: none;
-    
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -751,6 +791,7 @@ ul {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 
     color: var(--hero-text-color);
 
