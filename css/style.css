@@ -375,6 +375,12 @@ ul {
     align-items: center;
     justify-content: center;
 
+    font-size: 14px;
+    line-height: 1.7143;
+    letter-spacing: 0.03em;
+    color:var(--primery-text-color);
+
+
 }
 .checkbox {
     -webkit-appearance: none;
